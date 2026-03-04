@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "snippets": [
+    { "abbr": "myemail",  "text": "nixsoletechd@gmail.com",               "created": "2026-01-01T00:00:00Z" },
+    { "abbr": "myaddr",   "text": "123 Main Street, Dhaka, Bangladesh",   "created": "2026-01-01T00:00:00Z" },
+    { "abbr": "myphone",  "text": "+880-1234-567890",                     "created": "2026-01-01T00:00:00Z" },
+    { "abbr": "tysm",     "text": "Thank you so much!",                   "created": "2026-01-01T00:00:00Z" },
+    { "abbr": "brb",      "text": "Be right back.",                       "created": "2026-01-01T00:00:00Z" }
+  ]
+}

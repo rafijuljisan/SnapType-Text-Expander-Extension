@@ -1,0 +1,72 @@
+{
+  "manifest_version": 3,
+  "name": "SnapType — Text Expander",
+  "short_name": "SnapType",
+  "version": "1.0.0",
+  "description": "Expand short abbreviations into full text instantly. Works on every website.",
+  "icons": {
+    "16":  "icons/icon-16.png",
+    "32":  "icons/icon-32.png",
+    "48":  "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "contextMenus",
+    "clipboardRead",
+    "clipboardWrite"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "content/content-script.js",
+        "content/popup-ui.js"
+      ],
+      "css": [
+        "content/popup-ui.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "SnapType — Text Expander",
+    "default_icon": {
+      "16":  "icons/icon-16.png",
+      "32":  "icons/icon-32.png",
+      "48":  "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+
+  "commands": {
+    "toggle-extension": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Space",
+        "mac": "Command+Shift+Space"
+      },
+      "description": "Toggle SnapType on/off"
+    }
+  }
+}
