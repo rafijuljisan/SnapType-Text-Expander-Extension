@@ -292,7 +292,7 @@ function handleKeydown(e) {
   if (popupEl) {
     if (e.key === 'ArrowDown') { e.preventDefault(); e.stopPropagation(); movePopup(1);  return; }
     if (e.key === 'ArrowUp')   { e.preventDefault(); e.stopPropagation(); movePopup(-1); return; }
-    if (e.key === 'Tab' || e.key === ' ') {
+    if (e.key === 'Tab') {
       e.preventDefault(); e.stopPropagation();
       confirmExpansion();
       return;
@@ -436,7 +436,7 @@ function showPopup(targetEl, typedWord, matches) {
   `;
   ftr.innerHTML = `
     <span style="all:initial;font-family:inherit !important;font-size:10px !important;color:#2a3a4a !important;">↑↓ navigate</span>
-    <span style="all:initial;font-family:inherit !important;font-size:10px !important;color:#2a3a4a !important;">Tab/Space expand</span>
+    <span style="all:initial;font-family:inherit !important;font-size:10px !important;color:#2a3a4a !important;">Tab expand</span>
     <span style="all:initial;font-family:inherit !important;font-size:10px !important;color:#2a3a4a !important;">click to select</span>
     <span style="all:initial;font-family:inherit !important;font-size:10px !important;color:#2a3a4a !important;">Esc close</span>
   `;
